@@ -23,21 +23,30 @@ project-directory/
 ```
 ## Setup
 
-1. Create Required Files and Directories
+**1. Create Required Files and Directories**
 
 Run the following commands to set up the structure:
 
-mkdir images temp_images
+```bash
+mkdir temp_images
 touch flag.txt
+```
 
-2. Restrict Permissions
+**2. Restrict Permissions**
 
 Ensure that flag.txt and the folders images/ and temp_images/ can only be accessed with sudo privileges:
 
+```bash
+sudo chown root:root flag.txt
 sudo chmod 600 flag.txt
-sudo chmod 700 images temp_images
 
-3. Python Scripts
+sudo chmod 700 images
+sudo chmod 700 temp_images
+sudo chown root:root images
+sudo chown root:root temp_images
+```
+
+**3. Python Scripts**
 
 1. generate_flag.py
 
