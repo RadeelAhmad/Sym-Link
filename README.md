@@ -46,26 +46,25 @@ sudo chown root:root images
 sudo chown root:root temp_images
 ```
 
-**3. Python Scripts**
+## Python Scripts
 
-1. generate_flag.py
+**1. generate_flag.py**
 
 This script generates a flag, writes it to flag.txt, and removes the flag after sending it.
 
-import time
+```bash                                                                                                                    
+┌──(V3c70r㉿kali)-[~/Desktop]
+└─$ python3 generate_flag.py
+Done.
+Done.
+```
+flag.txt file:
 
-def generate_flag():
-    while True:
-        flag = "flag{example_flag}"
-        with open("flag.txt", "w") as f:
-            f.write(flag)
-        print("Flag sent: Done")
-        time.sleep(10)
-        with open("flag.txt", "w") as f:
-            f.truncate(0)  # Clear the flag
-
-if __name__ == "__main__":
-    generate_flag()
+```bash
+┌──(root㉿kali)-[/home/V3c70r/Desktop]
+└─# cat flag.txt
+flag{8355172653}  
+```
 
 2. image.py
 
