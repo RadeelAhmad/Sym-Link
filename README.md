@@ -188,6 +188,12 @@ Enter your choice (1, 2, 3, or 4): 3
 [+] Image opened successfully.
 ```
 
+The image saved in temp-image pops up on your screen like this:
+
+<p align="center">
+    <img src="R1.png" alt="image1">
+</p>
+
 - `Option 4`
 
 ```yaml
