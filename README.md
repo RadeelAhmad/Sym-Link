@@ -51,6 +51,22 @@ For Symbolic Link
 ln -s [target_file] [link_name]
 ```
 
+If you open file/folder direct without sudo access then:
+
+```yaml
+┌──(V3c70r㉿kali)-[~/Desktop]
+└─$ cat flag.txt          
+cat: flag.txt: Permission denied
+
+┌──(V3c70r㉿kali)-[~/Desktop]
+└─$ cd temp-images 
+cd: permission denied: temp-images
+
+┌──(V3c70r㉿kali)-[~/Desktop]
+└─$ cd images      
+cd: permission denied: images
+```
+
 ## Python Scripts
 
 **1. generate_flag.py**
@@ -218,29 +234,18 @@ Enter your choice (1, 2, 3, or 4): 4
 [+] Exiting. Goodbye!
 ```
 
+## Usage
 
-Usage
+- Run the scripts with to ensure proper access to restricted files and folders.
+- Start the fetch_flag.py script to interact with the system.
+```bash
+python3 fetch_flag.py
+```
+- Follow the menu to fetch flags or images.
 
-Run the scripts with sudo to ensure proper access to restricted files and folders.
+## Notes
+- Ensure you have the necessary permissions to run these scripts.
+- Use this system responsibly and in compliance with your organization's security policies.
 
-Start the fetch_flag.py script to interact with the system.
-
-sudo python3 fetch_flag.py
-
-Follow the menu to fetch flags or images.
-
-Notes
-
-Ensure you have the necessary permissions to run these scripts with sudo.
-
-Use this system responsibly and in compliance with your organization's security policies.
-
-Future Improvements
-
-Add logging for all operations to track activities.
-
-Implement encryption for flags and images to enhance security.
-
-Optimize the scripts for better performance and scalability.
 
 
