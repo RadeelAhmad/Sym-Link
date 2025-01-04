@@ -101,7 +101,7 @@ temp-images folder:
 
 **3. fetch_flag.py**
 
-```bash
+```yaml
 ┌──(V3c70r㉿kali)-[~/Desktop]
 └─$ sudo python3 fetch_flag.py
 
