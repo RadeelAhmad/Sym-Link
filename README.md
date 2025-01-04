@@ -57,7 +57,7 @@ ln -s [target_file] [link_name]
 
 This script generates a flag, writes it to flag.txt, and removes the flag after sending it.
 
-```bash                                                                                                                    
+```yaml                                                                                                                
 ┌──(V3c70r㉿kali)-[~/Desktop]
 └─$ python3 generate_flag.py
 Done.
@@ -65,7 +65,7 @@ Done.
 ```
 flag.txt file:
 
-```bash
+```yaml
 ┌──(root㉿kali)-[/home/V3c70r/Desktop]
 └─# cat flag.txt
 flag{6107274195}  
@@ -73,7 +73,7 @@ flag{6107274195}
 
 Symbolic link file also save the same flag that store in flag.txt
 
-```bash
+```yaml
 ┌──(V3c70r㉿kali)-[~/Desktop]
 └─$ sudo cat symbolic_flag.txt                    
 flag{6107274195}  
@@ -83,7 +83,7 @@ flag{6107274195}
 
 This script handles moving an image from the images folder to the temp_images folder and deletes it after processing.
 
-```bash
+```yaml
 ┌──(V3c70r㉿kali)-[~/Desktop]
 └─$ python3 image.py
 Image added
@@ -93,7 +93,7 @@ Image added
 
 temp-images folder:
 
-```bash
+```yaml
 ┌──(root㉿kali)-[/home/naahl/Desktop/temp-images]
 └─# ls
 3.png
