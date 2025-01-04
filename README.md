@@ -46,6 +46,11 @@ sudo chown root:root images
 sudo chown root:root temp_images
 ```
 
+For Symbolic Link
+```bash
+ln -s [target_file] [link_name]
+```
+
 ## Python Scripts
 
 **1. generate_flag.py**
@@ -63,10 +68,18 @@ flag.txt file:
 ```bash
 ┌──(root㉿kali)-[/home/V3c70r/Desktop]
 └─# cat flag.txt
-flag{8355172653}  
+flag{6107274195}  
 ```
 
-2. image.py
+Symbolic link file also save the same flag that store in flag.txt
+
+```bash
+┌──(V3c70r㉿kali)-[~/Desktop]
+└─$ sudo cat symbolic_flag.txt                    
+flag{6107274195}  
+```
+
+**2. Image.py**
 
 This script handles moving an image from the images folder to the temp_images folder and deletes it after processing.
 
@@ -86,97 +99,37 @@ temp-images folder:
 3.png
 ```
 
+**3. fetch_flag.py**
 
-import os
-import shutil
-import time
+```bash
+┌──(V3c70r㉿kali)-[~/Desktop]
+└─$ sudo python3 fetch_flag.py
 
-def process_image():
-    while True:
-        images_folder = "images"
-        temp_folder = "temp_images"
+  ██████▓██   ██▓ ███▄ ▄███▓    ██▓     ██▓ ███▄    █  ██ ▄█▀
+▒██    ▒ ▒██  ██▒▓██▒▀█▀ ██▒   ▓██▒    ▓██▒ ██ ▀█   █  ██▄█▒ 
+░ ▓██▄    ▒██ ██░▓██    ▓██░   ▒██░    ▒██▒▓██  ▀█ ██▒▓███▄░ 
+  ▒   ██▒ ░ ▐██▓░▒██    ▒██    ▒██░    ░██░▓██▒  ▐▌██▒▓██ █▄ 
+▒██████▒▒ ░ ██▒▓░▒██▒   ░██▒   ░██████▒░██░▒██░   ▓██░▒██▒ █▄
+▒ ▒▓▒ ▒ ░  ██▒▒▒ ░ ▒░   ░  ░   ░ ▒░▓  ░░▓  ░ ▒░   ▒ ▒ ▒ ▒▒ ▓▒
+░ ░▒  ░ ░▓██ ░▒░ ░  ░      ░   ░ ░ ▒  ░ ▒ ░░ ░░   ░ ▒░░ ░▒ ▒░
+░  ░  ░  ▒ ▒ ░░  ░      ░        ░ ░    ▒ ░   ░   ░ ░ ░ ░░ ░ 
+      ░  ░ ░            ░          ░  ░ ░           ░ ░  ░   
+         ░ ░                                                 
 
-        for file_name in os.listdir(images_folder):
-            if file_name.endswith(".png"):
-                src = os.path.join(images_folder, file_name)
-                dest = os.path.join(temp_folder, file_name)
+Select an option:
+1 - Kill the generate_flag.py process and fetch the flag
+2 - Fetch the flag without killing the process
+3 - Fetch Image from temp-images folder
+4 - Exit
+Enter your choice (1, 2, 3, or 4): 1
 
-                shutil.copy(src, dest)
-                print(f"Image {file_name} sent to temp_images folder.")
-
-                time.sleep(10)
-                os.remove(dest)
-                print(f"Image {file_name} removed from temp_images folder.")
-
-if __name__ == "__main__":
-    process_image()
-
-3. fetch_flag.py
-
-This script provides a menu-driven interface for fetching flags and images.
-
-import os
-import signal
-import subprocess
-
-FLAG_FILE = "flag.txt"
-GENERATE_FLAG_PROCESS = None
-
-def fetch_flag():
-    try:
-        with open(FLAG_FILE, "r") as f:
-            content = f.read().strip()
-            print(f"Fetched flag: {content}")
-    except Exception as e:
-        print(f"Error fetching flag: {e}")
-
-def fetch_flag_kill():
-    global GENERATE_FLAG_PROCESS
-    if GENERATE_FLAG_PROCESS:
-        os.kill(GENERATE_FLAG_PROCESS.pid, signal.SIGTERM)
-        print("generate_flag process terminated.")
-    fetch_flag()
-
-def fetch_image():
-    temp_folder = "temp_images"
-    try:
-        for file_name in os.listdir(temp_folder):
-            if file_name.endswith(".png"):
-                print(f"Fetched image: {file_name}")
-                return
-        print("No images found in temp_images folder.")
-    except Exception as e:
-        print(f"Error fetching image: {e}")
-
-def main():
-    global GENERATE_FLAG_PROCESS
-    while True:
-        print("\nOptions:")
-        print("1. Fetch Flag")
-        print("2. Fetch Flag (Kill Process)")
-        print("3. Fetch Image")
-        print("4. Exit")
-
-        choice = input("Enter your choice: ")
-
-        if choice == "1":
-            fetch_flag()
-        elif choice == "2":
-            fetch_flag_kill()
-        elif choice == "3":
-            fetch_image()
-        elif choice == "4":
-            if GENERATE_FLAG_PROCESS:
-                os.kill(GENERATE_FLAG_PROCESS.pid, signal.SIGTERM)
-            print("Exiting...")
-            break
-        else:
-            print("Invalid choice. Please try again.")
-
-if __name__ == "__main__":
-    GENERATE_FLAG_PROCESS = subprocess.Popen(["python3", "generate_flag.py"])
-    main()
-
+[+] Option 1 Selected: Killing the process...
+[+] Searching for generate_flag.py process...
+[+] Killing process with PID: 6453
+[+] generate_flag.py process terminated successfully.
+[+] Reading flag from flag.txt...
+[+] Flag: flag{6107274195}
+```
 Usage
 
 Run the scripts with sudo to ensure proper access to restricted files and folders.
