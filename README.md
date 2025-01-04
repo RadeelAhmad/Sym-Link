@@ -70,6 +70,23 @@ flag{8355172653}
 
 This script handles moving an image from the images folder to the temp_images folder and deletes it after processing.
 
+```bash
+┌──(V3c70r㉿kali)-[~/Desktop]
+└─$ python3 image.py
+Image added
+Image added
+Image added
+```
+
+temp-images folder:
+
+```bash
+┌──(root㉿kali)-[/home/naahl/Desktop/temp-images]
+└─# ls
+3.png
+```
+
+
 import os
 import shutil
 import time
