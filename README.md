@@ -102,6 +102,7 @@ temp-images folder:
 **3. fetch_flag.py**
 
 - `Option 1`
+
 ```yaml
 ┌──(V3c70r㉿kali)-[~/Desktop]
 └─$ sudo python3 fetch_flag.py
@@ -131,6 +132,87 @@ Enter your choice (1, 2, 3, or 4): 1
 [+] Reading flag from flag.txt...
 [+] Flag: flag{6107274195}
 ```
+
+- `Option 2`
+
+```yaml
+  ██████▓██   ██▓ ███▄ ▄███▓    ██▓     ██▓ ███▄    █  ██ ▄█▀
+▒██    ▒ ▒██  ██▒▓██▒▀█▀ ██▒   ▓██▒    ▓██▒ ██ ▀█   █  ██▄█▒ 
+░ ▓██▄    ▒██ ██░▓██    ▓██░   ▒██░    ▒██▒▓██  ▀█ ██▒▓███▄░ 
+  ▒   ██▒ ░ ▐██▓░▒██    ▒██    ▒██░    ░██░▓██▒  ▐▌██▒▓██ █▄ 
+▒██████▒▒ ░ ██▒▓░▒██▒   ░██▒   ░██████▒░██░▒██░   ▓██░▒██▒ █▄
+▒ ▒▓▒ ▒ ░  ██▒▒▒ ░ ▒░   ░  ░   ░ ▒░▓  ░░▓  ░ ▒░   ▒ ▒ ▒ ▒▒ ▓▒
+░ ░▒  ░ ░▓██ ░▒░ ░  ░      ░   ░ ░ ▒  ░ ▒ ░░ ░░   ░ ▒░░ ░▒ ▒░
+░  ░  ░  ▒ ▒ ░░  ░      ░        ░ ░    ▒ ░   ░   ░ ░ ░ ░░ ░ 
+      ░  ░ ░            ░          ░  ░ ░           ░ ░  ░   
+         ░ ░                                                 
+
+Select an option:
+1 - Kill the generate_flag.py process and fetch the flag
+2 - Fetch the flag without killing the process
+3 - Fetch Image from temp-images folder
+4 - Exit
+Enter your choice (1, 2, 3, or 4): 2
+
+[+] Option 2 Selected: Fetching the flag without killing the process...
+[+] Reading flag from flag.txt...
+[+] Flag: flag{6107274195}
+```
+
+- `Option 3`
+
+```yaml
+  ██████▓██   ██▓ ███▄ ▄███▓    ██▓     ██▓ ███▄    █  ██ ▄█▀
+▒██    ▒ ▒██  ██▒▓██▒▀█▀ ██▒   ▓██▒    ▓██▒ ██ ▀█   █  ██▄█▒ 
+░ ▓██▄    ▒██ ██░▓██    ▓██░   ▒██░    ▒██▒▓██  ▀█ ██▒▓███▄░ 
+  ▒   ██▒ ░ ▐██▓░▒██    ▒██    ▒██░    ░██░▓██▒  ▐▌██▒▓██ █▄ 
+▒██████▒▒ ░ ██▒▓░▒██▒   ░██▒   ░██████▒░██░▒██░   ▓██░▒██▒ █▄
+▒ ▒▓▒ ▒ ░  ██▒▒▒ ░ ▒░   ░  ░   ░ ▒░▓  ░░▓  ░ ▒░   ▒ ▒ ▒ ▒▒ ▓▒
+░ ░▒  ░ ░▓██ ░▒░ ░  ░      ░   ░ ░ ▒  ░ ▒ ░░ ░░   ░ ▒░░ ░▒ ▒░
+░  ░  ░  ▒ ▒ ░░  ░      ░        ░ ░    ▒ ░   ░   ░ ░ ░ ░░ ░ 
+      ░  ░ ░            ░          ░  ░ ░           ░ ░  ░   
+         ░ ░                                                 
+
+Select an option:
+1 - Kill the generate_flag.py process and fetch the flag
+2 - Fetch the flag without killing the process
+3 - Fetch Image from temp-images folder
+4 - Exit
+Enter your choice (1, 2, 3, or 4): 3
+
+[+] Option 3 Selected: Fetching Image from temp-images...
+[+] Checking temp-images folder for images...
+[+] Image fetched: /home/naahl/Desktop/temp-images/3.png
+[+] Image size: 6939636 bytes
+[+] Image permissions: 744
+[+] Image opened successfully.
+```
+
+- `Option 4`
+
+```yaml
+  ██████▓██   ██▓ ███▄ ▄███▓    ██▓     ██▓ ███▄    █  ██ ▄█▀
+▒██    ▒ ▒██  ██▒▓██▒▀█▀ ██▒   ▓██▒    ▓██▒ ██ ▀█   █  ██▄█▒ 
+░ ▓██▄    ▒██ ██░▓██    ▓██░   ▒██░    ▒██▒▓██  ▀█ ██▒▓███▄░ 
+  ▒   ██▒ ░ ▐██▓░▒██    ▒██    ▒██░    ░██░▓██▒  ▐▌██▒▓██ █▄ 
+▒██████▒▒ ░ ██▒▓░▒██▒   ░██▒   ░██████▒░██░▒██░   ▓██░▒██▒ █▄
+▒ ▒▓▒ ▒ ░  ██▒▒▒ ░ ▒░   ░  ░   ░ ▒░▓  ░░▓  ░ ▒░   ▒ ▒ ▒ ▒▒ ▓▒
+░ ░▒  ░ ░▓██ ░▒░ ░  ░      ░   ░ ░ ▒  ░ ▒ ░░ ░░   ░ ▒░░ ░▒ ▒░
+░  ░  ░  ▒ ▒ ░░  ░      ░        ░ ░    ▒ ░   ░   ░ ░ ░ ░░ ░ 
+      ░  ░ ░            ░          ░  ░ ░           ░ ░  ░   
+         ░ ░                                                 
+
+Select an option:
+1 - Kill the generate_flag.py process and fetch the flag
+2 - Fetch the flag without killing the process
+3 - Fetch Image from temp-images folder
+4 - Exit
+Enter your choice (1, 2, 3, or 4): 4
+
+[+] Exiting. Goodbye!
+```
+
+
 Usage
 
 Run the scripts with sudo to ensure proper access to restricted files and folders.
