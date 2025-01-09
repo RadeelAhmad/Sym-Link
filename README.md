@@ -246,6 +246,3 @@ python3 fetch_flag.py
 ## Notes
 - Ensure you have the necessary permissions to run these scripts.
 - Use this system responsibly and in compliance with your organization's security policies.
-
-
-
